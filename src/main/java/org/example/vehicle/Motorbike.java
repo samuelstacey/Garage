@@ -4,9 +4,9 @@ public class Motorbike extends Vehicle {
 
     private int numberOfHandles;
     private boolean hasStorageBox;
-    private final static String type = "Motorbike";
+    private final static VehicleType type = VehicleType.MOTORBIKE;
 
-    public Motorbike(final int id, final int numberOfWheels, final String type, final String brand, final int numberOfMirrors, final int numberOfHandles, final boolean hasStorageBox) {
+    public Motorbike(final int id, final int numberOfWheels, final VehicleType type, final String brand, final int numberOfMirrors, final int numberOfHandles, final boolean hasStorageBox) {
         super(id, numberOfWheels, type, brand, numberOfMirrors);
         this.numberOfHandles = numberOfHandles;
         this.hasStorageBox = hasStorageBox;
@@ -25,7 +25,7 @@ public class Motorbike extends Vehicle {
     }
 
     @Override
-    public String getType() {
+    public VehicleType getType() {
         return type;
     }
 

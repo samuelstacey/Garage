@@ -2,11 +2,11 @@ package org.example.vehicle;
 
 public class Car extends Vehicle {
 
-    private int numberOfDoors;
+    private final int numberOfDoors;
 
-    private final static String type = "Car";
+    private final static VehicleType type = VehicleType.CAR;
 
-    public Car(final int id, final int numberOfWheels, final String type, final String brand,
+    public Car(final int id, final int numberOfWheels, final VehicleType VehicleType, final String brand,
                final int numberOfMirrors, final int numberOfDoors) {
         super(id, numberOfWheels, type, brand, numberOfMirrors);
         this.numberOfDoors = numberOfDoors;
@@ -28,7 +28,7 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public String getType() {
+    public VehicleType getType() {
         return type;
     }
 

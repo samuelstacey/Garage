@@ -4,10 +4,10 @@ public class Van extends Vehicle {
 
     private int numberOfDoors;
 
-    private static String type = "Van";
+    private static VehicleType type = VehicleType.VAN;
     private int capacity;
 
-    public Van(final int id, final int numberOfWheels, final String type,
+    public Van(final int id, final int numberOfWheels, final VehicleType type,
                final String brand, final int numberOfMirrors, final int numberOfDoors, final int capacity) {
         super(id, numberOfWheels, type, brand, numberOfMirrors);
         this.numberOfDoors = numberOfDoors;
@@ -27,7 +27,7 @@ public class Van extends Vehicle {
     }
 
     @Override
-    public String getType() {
+    public VehicleType getType() {
         return type;
     }
 }

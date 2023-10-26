@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.vehicle.Vehicle;
+import org.example.vehicle.VehicleType;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ public class Garage {
         return vehicles;
     }
 
-    public ArrayList<Vehicle> removeVehicleByType(String vehicleType) {
+    public ArrayList<Vehicle> removeVehicleByType(VehicleType vehicleType) {
         vehicles.removeIf(vehicle -> vehicle.getType().equals(vehicleType));
         return vehicles;
     }

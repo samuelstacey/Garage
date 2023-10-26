@@ -4,11 +4,11 @@ public abstract class Vehicle {
 
     int id;
     int numberOfWheels;
-    String type;
+    VehicleType type;
     String brand;
     int numberOfMirrors;
 
-    public Vehicle(final int id, final int numberOfWheels, final String type, final String brand, final int numberOfMirrors) {
+    public Vehicle(final int id, final int numberOfWheels, final VehicleType type, final String brand, final int numberOfMirrors) {
         this.id = id;
         this.numberOfWheels = numberOfWheels;
         this.type = type;
@@ -20,5 +20,5 @@ public abstract class Vehicle {
 
     public abstract int getId();
 
-    public abstract String getType();
+    public abstract VehicleType getType();
 }

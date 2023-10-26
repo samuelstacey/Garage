@@ -29,4 +29,16 @@ public class Motorbike extends Vehicle {
         return type;
     }
 
+    @Override
+    public String toString() {
+        return '\n' + "Motorbike{" +
+                "numberOfHandles=" + numberOfHandles +
+                ", hasStorageBox=" + hasStorageBox +
+                ", id=" + id +
+                ", numberOfWheels=" + numberOfWheels +
+                ", type=" + type +
+                ", brand='" + brand + '\'' +
+                ", numberOfMirrors=" + numberOfMirrors +
+                '}';
+    }
 }

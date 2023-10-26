@@ -1,5 +1,13 @@
 package org.example;
 
+import org.example.vehicle.Car;
+import org.example.vehicle.Motorbike;
+import org.example.vehicle.Van;
+import org.example.vehicle.VehicleType;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -19,8 +27,24 @@ package org.example;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public static void main( String[] args ) {
+        Car car = new Car(1, 3, VehicleType.CAR,
+                "Ford", 2, 2);
+        Van van = new Van(1, 3, VehicleType.VAN,
+                "Ford", 2, 2, 150);
+        Motorbike motorbike = new Motorbike(1, 3, VehicleType.MOTORBIKE,
+                "Ford", 2, 2, true);
+        Garage garage = new Garage(new ArrayList<>());
+
+        garage.addVehicle(car);
+        garage.addVehicle(van);
+        garage.addVehicle(motorbike);
+
+        System.out.println(garage);
+
+        System.out.println(car.getType().name() + " fixing price: " + garage.fixVehicle(car));
+        System.out.println(van.getType().name() + " fixing price: " + garage.fixVehicle(van.getId()));
+        System.out.println(motorbike.getType().name() + " fixing price: " + garage.fixVehicle(motorbike));
+        System.out.println("Total price: " + garage.fixVehicles());
     }
 }

@@ -21,4 +21,15 @@ public abstract class Vehicle {
     public abstract int getId();
 
     public abstract VehicleType getType();
+
+    @Override
+    public String toString() {
+        return '\n' + "Vehicle{" +
+                "id=" + id +
+                ", numberOfWheels=" + numberOfWheels +
+                ", type=" + type +
+                ", brand='" + brand + '\'' +
+                ", numberOfMirrors=" + numberOfMirrors +
+                '}';
+    }
 }

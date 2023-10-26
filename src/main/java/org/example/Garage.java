@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Garage {
 
-    ArrayList<Vehicle> vehicles;
+    private final ArrayList<Vehicle> vehicles;
 
     public Garage(final ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
@@ -57,5 +57,12 @@ public class Garage {
         return vehicles.stream()
                 .map(Vehicle::calculatePrice)
                 .reduce(0, Integer::sum);
+    }
+
+    @Override
+    public String toString() {
+        return "Garage{" +
+                "vehicles=" + vehicles +
+                '}';
     }
 }

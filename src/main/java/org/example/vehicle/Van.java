@@ -30,4 +30,17 @@ public class Van extends Vehicle {
     public VehicleType getType() {
         return type;
     }
+
+    @Override
+    public String toString() {
+        return '\n' + "Van{" +
+                "numberOfDoors=" + numberOfDoors +
+                ", capacity=" + capacity +
+                ", id=" + id +
+                ", numberOfWheels=" + numberOfWheels +
+                ", type=" + type +
+                ", brand='" + brand + '\'' +
+                ", numberOfMirrors=" + numberOfMirrors +
+                '}';
+    }
 }
